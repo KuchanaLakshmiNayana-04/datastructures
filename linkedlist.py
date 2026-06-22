@@ -14,6 +14,14 @@ class Linkedlist :
         while itr.next:
             itr = itr.next
         itr.next = new 
+    def add_beg(self,data):
+        obj = Node(data)
+        if self.head is None:
+            self.head = obj
+            return
+        obj.next = self.head
+        self.head = obj
+
     def display(self):
         itr = self.head
         while itr:
@@ -27,4 +35,5 @@ l1.add_end(350)
 l1.add_end(450)
 l1.add_end(550)
 l1.add_end(650)
+l1.add_beg(10)
 l1.display()
